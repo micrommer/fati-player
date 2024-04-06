@@ -1,34 +1,31 @@
 from tkinter import *
+from tkinter import messagebox
+root =Tk()
+root.title('Account Player')
+root.geometry('895x500+200+200')
+root.configure(bg="#fff")
+root.resizable(False,False)
+img = PhotoImage(file='login0.pn')
+img1 = PhotoImage(file='user.png')
+root.iconphoto(False,img1)
+Label(root,image=img,bg="#fff").place(x=5,y=5)
+frame = Frame(root,width=350,height=350,bg='white')
+frame.place(x=480,y=70)
+heading =Label(frame,text='Sign in',fg='#a30349',bg='white',font=('Microsoft YaHei Light',30,'bold'))
+heading.place(x=110,y=5)
 
-# Define window size
-window_width = 800
-window_height = 800
+user = Entry(frame,width=25,fg='black',border=0,bg="white",font=('Microsoft YaHei Light',11))
+user.place(x=30,y=80)
+user.insert(0,'Username')
+Frame(frame,width=300,height=3,bg='purple').place(x=25,y=107)
 
-# Create the main window
-window = Tk()
-window.title("Fati Player 🎥")
+code = Entry(frame,width=25,fg='black',border=0,bg="white",font=('Microsoft YaHei Light',11))
+code.place(x=30,y=150)
+code.insert(0,'Password')
+Frame(frame,width=300,height=3,bg='purple').place(x=25,y=177)
 
-# Set window size
-window.geometry(f"{window_width}x{window_height}")
 
-# Create a label for the text entry field
-text_label = Label(window, text="Enter text here:", bg="#AAAAAA")
-text_label.pack(pady=10)
+root.mainloop()
 
-# Create the text entry field
-text_entry = Entry(window, width=50)
-text_entry.pack(pady=10)
 
-# Define a function to handle button click (placeholder for now)
-def button_click():
-    # This function can be used to perform an action when the button is clicked
-    print("Button clicked!")
-    print(text_entry.get())
-    # Add your desired functionality here
 
-# Create the button
-button = Button(window, text="Click Me!", command=button_click)
-button.pack(pady=10)
-
-# Run the main event loop
-window.mainloop()
