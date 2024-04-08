@@ -23,3 +23,5 @@ Frame(frame, width=300, height=3, bg='purple').place(x=25, y=177)
 Button(frame, width=39, pady=7, text='Sign in', bg='#57a1f8', fg='white', border=0).place(x=35, y=204)
 label = Label(frame, text='Dont have an account?', fg='black', bg='white', font=('Microsoft YaHei Light', 9))
 label.place(x=75, y=175)
+
+root.mainloop()
